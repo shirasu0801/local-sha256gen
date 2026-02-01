@@ -1,0 +1,197 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', monospace;
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
+.screen {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+}
+
+h1 {
+    color: #ffffff;
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-weight: normal;
+}
+
+h2 {
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: normal;
+    border-bottom: 1px solid #333;
+    padding-bottom: 10px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.section {
+    margin-bottom: 40px;
+    background-color: #252525;
+    padding: 20px;
+    border: 1px solid #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input[type="text"],
+input[type="password"] {
+    background-color: #1a1a1a;
+    border: 1px solid #444;
+    color: #e0e0e0;
+    padding: 10px;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    outline: none;
+    border-color: #666;
+}
+
+.password-row {
+    display: flex;
+    gap: 10px;
+}
+
+.password-row input {
+    flex: 1;
+}
+
+button {
+    background-color: #333;
+    border: 1px solid #555;
+    color: #e0e0e0;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #444;
+}
+
+button:active {
+    background-color: #555;
+}
+
+.btn-secondary {
+    background-color: #2a2a2a;
+    font-size: 12px;
+    padding: 8px 16px;
+}
+
+.error {
+    color: #ff6666;
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+#passwordList {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.password-item {
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    padding: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr auto;
+    gap: 15px;
+    align-items: center;
+}
+
+.password-item-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.password-item-label {
+    font-size: 11px;
+    color: #999;
+    text-transform: uppercase;
+}
+
+.password-item-value {
+    font-size: 14px;
+    color: #e0e0e0;
+    word-break: break-all;
+}
+
+.password-item-actions {
+    display: flex;
+    gap: 5px;
+}
+
+.password-item-actions button {
+    padding: 5px 10px;
+    font-size: 11px;
+}
+
+.password-item-actions .btn-delete {
+    background-color: #4a1a1a;
+    border-color: #6a2a2a;
+}
+
+.password-item-actions .btn-delete:hover {
+    background-color: #5a2a2a;
+}
+
+.password-item-actions .btn-edit {
+    background-color: #1a3a1a;
+    border-color: #2a4a2a;
+}
+
+.password-item-actions .btn-edit:hover {
+    background-color: #2a4a2a;
+}
+
+.password-item-actions .btn-copy {
+    background-color: #1a1a3a;
+    border-color: #2a2a4a;
+}
+
+.password-item-actions .btn-copy:hover {
+    background-color: #2a2a4a;
+}
+
+.password-masked {
+    font-family: 'Courier New', monospace;
+    letter-spacing: 2px;
+}

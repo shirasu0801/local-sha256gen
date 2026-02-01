@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>パスワード管理</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="loginScreen" class="screen">
+        <div class="container">
+            <h1>パスワード管理</h1>
+            <form id="loginForm">
+                <input type="password" id="masterPassword" placeholder="マスターパスワード" required>
+                <button type="submit">ログイン</button>
+            </form>
+            <div id="loginError" class="error"></div>
+        </div>
+    </div>
+
+    <div id="mainScreen" class="screen hidden">
+        <div class="container">
+            <header>
+                <h1>パスワード管理</h1>
+                <button id="logoutBtn" class="btn-secondary">ログアウト</button>
+            </header>
+
+            <div class="section">
+                <h2>新規追加</h2>
+                <form id="addForm">
+                    <input type="text" id="service" placeholder="サービス名" required>
+                    <input type="text" id="url" placeholder="URL">
+                    <input type="text" id="userId" placeholder="ユーザーID" required>
+                    <div class="password-row">
+                        <input type="password" id="password" placeholder="パスワード" required>
+                        <button type="button" id="generateBtn" class="btn-secondary">生成</button>
+                    </div>
+                    <button type="submit">追加</button>
+                </form>
+            </div>
+
+            <div class="section">
+                <h2>パスワード一覧</h2>
+                <div id="passwordList"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
